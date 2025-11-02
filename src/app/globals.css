@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a0a0f;
+  --panel: #111827;
+  --border: #1f2937;
+  --border-light: #374151;
+  --text: #e5e7eb;
+  --text-muted: #9ca3af;
+  --text-dark: #6b7280;
+  --green-primary: #10b981;
+  --red-primary: #ef4444;
+  --yellow-primary: #fbbf24;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: 'Courier New', Consolas, Monaco, monospace;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Transition defaults */
+* {
+  transition-timing-function: ease-in-out;
+}
+
+/* Custom scrollbar - Global */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--border);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--border-light);
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #4b5563;
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-light) var(--border);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
