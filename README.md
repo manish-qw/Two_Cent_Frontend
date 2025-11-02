@@ -244,7 +244,7 @@ depthPercentage = (rowTotal / maxTotal) * 100
    - Verify auto-reconnection attempts
    - Check error message display
 
-## 🚢 Deployment
+## Deployment
 
 ### Build for Production
 
