@@ -2,21 +2,21 @@
 
 A high-performance, real-time stock order book visualizer built with Next.js, TypeScript, and TailwindCSS, streaming live market data from the Binance WebSocket API.
 
-## 🎨 Design Compliance
+## Design Compliance
 
 This application **fully implements** the comprehensive design specification including:
-- ✅ Exact color palette (#0a0a0f, #111827, #10b981, #ef4444, etc.)
-- ✅ Precise typography (Courier New monospace, exact font sizes: 28px, 18px, 14px, 12px)
-- ✅ Pixel-perfect spacing (24px gaps, 16px padding, 80px header, 50px footer)
-- ✅ Correct responsive breakpoints (1024px, 768px)
-- ✅ Proper depth bar gradients (15% opacity, correct directions)
-- ✅ 150ms transitions on all interactive elements
-- ✅ Flash animations (500ms green/red for trades)
-- ✅ 2:1 desktop layout ratio
+- Exact color palette (#0a0a0f, #111827, #10b981, #ef4444, etc.)
+- Precise typography (Courier New monospace, exact font sizes: 28px, 18px, 14px, 12px)
+- Pixel-perfect spacing (24px gaps, 16px padding, 80px header, 50px footer)
+- Correct responsive breakpoints (1024px, 768px)
+- Proper depth bar gradients (15% opacity, correct directions)
+- 150ms transitions on all interactive elements
+- Flash animations (500ms green/red for trades)
+- 2:1 desktop layout ratio
 
 See [DESIGN_COMPLIANCE.md](./DESIGN_COMPLIANCE.md) for complete specification checklist.
 
-## 🎯 Features
+## Features
 
 - **Real-Time WebSocket Integration**: Live streaming of order book depth and trade data from Binance
 - **High-Performance State Management**: Efficient state updates using `useReducer` with O(1) price level updates
@@ -27,7 +27,7 @@ See [DESIGN_COMPLIANCE.md](./DESIGN_COMPLIANCE.md) for complete specification ch
 - **Responsive Design**: Professional UI that works on desktop and mobile
 - **Auto-Reconnection**: Automatic WebSocket reconnection with exponential backoff
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -51,7 +51,7 @@ Navigate to [http://localhost:3000](http://localhost:3000)
 
 The app will automatically connect to the Binance WebSocket API and start streaming live data.
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 order-book-visualizer/
@@ -87,7 +87,7 @@ order-book-visualizer/
 └── README.md
 ```
 
-## 🏗️ Technical Architecture
+## Technical Architecture
 
 ### State Management (useReducer)
 
@@ -142,7 +142,7 @@ The `useBinanceSocket` hook manages dual WebSocket connections:
    - CSS animations instead of JavaScript
    - Automatic cleanup after 500ms
 
-## 🔌 API Integration
+## API Integration
 
 ### Binance WebSocket Endpoints
 
@@ -181,7 +181,7 @@ Where `{symbol}` is lowercase, e.g., `btcusdt`, `ethusdt`, `bnbusdt`.
 }
 ```
 
-## 🎨 Design Choices
+## Design Choices
 
 ### Why Next.js?
 - Server-side rendering capabilities for production
@@ -201,7 +201,7 @@ Where `{symbol}` is lowercase, e.g., `btcusdt`, `ethusdt`, `bnbusdt`.
 - Efficient bandwidth usage
 - Better user experience
 
-## 📊 Key Calculations
+## Key Calculations
 
 ### Spread Calculation
 ```typescript
@@ -220,7 +220,7 @@ Background bar width is proportional to cumulative total:
 depthPercentage = (rowTotal / maxTotal) * 100
 ```
 
-## 🧪 Testing the Application
+## Testing the Application
 
 ### Manual Testing
 
@@ -270,7 +270,7 @@ npm run build
 
 Upload the `.next` folder or connect your Git repository.
 
-## 🔧 Environment Variables
+## Environment Variables
 
 Currently no environment variables are required. All endpoints are hardcoded to Binance public WebSocket API.
 
@@ -279,7 +279,7 @@ For production with API keys (e.g., private order streams):
 NEXT_PUBLIC_WS_ENDPOINT=wss://stream.binance.com:9443/ws
 ```
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### WebSocket Connection Issues
 
@@ -305,36 +305,23 @@ NEXT_PUBLIC_WS_ENDPOINT=wss://stream.binance.com:9443/ws
 - Check CPU usage
 - Reduce number of visible price levels (modify `MAX_LEVELS` in hooks)
 
-## 📝 Future Enhancements
-
-- [ ] Add order book aggregation levels (0.01, 0.1, 1.0)
-- [ ] Implement click-to-trade interface
-- [ ] Add price alerts
-- [ ] Historical data charts
-- [ ] Multiple pair comparison view
-- [ ] Dark/Light theme toggle
-- [ ] Export trade data to CSV
-- [ ] Advanced filtering options
-- [ ] WebSocket compression for reduced bandwidth
-- [ ] Service Worker for offline support
-
-## 📄 License
+## License
 
 This project is for educational purposes as part of a frontend engineering assignment.
 
-## 👨‍💻 Author
+## Author
 
 Created for the Two-Cent Frontend Engineering Assignment
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Binance for providing public WebSocket API
 - Next.js team for excellent documentation
 - TailwindCSS for the utility-first CSS framework
 
-## 📞 Support
+## Support
 
 For questions or issues, please refer to:
 - [Binance API Documentation](https://binance-docs.github.io/apidocs/spot/en/)
