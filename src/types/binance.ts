@@ -2,6 +2,13 @@
 
 export type TradingPair = 'BTCUSDT' | 'ETHUSDT' | 'BNBUSDT';
 
+// Order Book Level
+export interface OrderBookLevel {
+  price: number;
+  amount: number;
+  total: number;
+}
+
 // Aggregate Trade Stream Event
 // Stream: <symbol>@aggTrade
 export interface BinanceTradeEvent {
